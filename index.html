@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>محاكي اختبار التنظيم والإدارة - معلم مساعد لغة عربية</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--tx:#1e2347;--mu:#6c7194;--ac:#6c5ce7;--ac2:#00b8d9;--ok:#10b981;--no:#ef4444;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html,body{margin:0}
+body{font-family:"Cairo","Segoe UI",Tahoma,Arial,sans-serif;background:#f6f4ff;color:var(--tx);line-height:1.8;min-height:100vh;overflow-x:hidden}
+.bg{position:fixed;inset:0;z-index:-1;overflow:hidden}
+.bg i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;animation:fl 14s ease-in-out infinite alternate}
+.bg i:nth-child(1){width:380px;height:380px;background:#a78bfa;top:-100px;right:-80px}
+.bg i:nth-child(2){width:340px;height:340px;background:#5eead4;bottom:-80px;left:-80px;animation-delay:-5s}
+.bg i:nth-child(3){width:260px;height:260px;background:#fda4af;top:42%;left:45%;animation-delay:-9s}
+@keyframes fl{to{transform:translate(40px,60px) scale(1.18)}}
+.w{max-width:700px;margin:0 auto;padding:18px}
+.c{background:rgba(255,255,255,.8);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid #fff;box-shadow:0 12px 40px rgba(108,92,231,.14);border-radius:24px;padding:22px;margin-bottom:16px;animation:up .55s cubic-bezier(.2,.8,.2,1) both}
+@keyframes up{from{opacity:0;transform:translateY(20px)}}
+.hero{text-align:center}
+.logo{width:78px;height:78px;margin:0 auto 10px;border-radius:24px;background:linear-gradient(135deg,var(--ac),var(--ac2));display:grid;place-items:center;font-size:2.3rem;box-shadow:0 14px 30px rgba(108,92,231,.4);animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-7px) rotate(-4deg)}}
+h1{font-size:1.65rem;font-weight:800;margin:0;background:linear-gradient(90deg,var(--ac),#ec4899);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:1.15rem;font-weight:700;margin:8px 0 12px}
+.mu{color:var(--mu);font-size:.9rem}
+.st{display:flex;gap:10px;margin:16px 0}
+.st div{flex:1;background:#fff;border-radius:16px;padding:8px 4px;font-size:.8rem;color:var(--mu);box-shadow:0 4px 14px rgba(108,92,231,.1)}
+.st b{display:block;font-size:1.35rem;color:var(--ac);line-height:1.3}
+button{font:inherit;cursor:pointer;border:0;transition:transform .2s,box-shadow .2s,background .2s}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:10px 0 20px}
+.chips button{background:#fff;color:var(--k);border:2px solid var(--k);border-radius:30px;padding:3px 18px;font-weight:700}
+.chips button:hover{transform:translateY(-2px)}
+.chips button.on{background:var(--k);color:#fff;transform:scale(1.07);box-shadow:0 8px 18px color-mix(in srgb,var(--k) 40%,transparent)}
+button.p{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--ac),#ec4899);color:#fff;font-weight:800;border-radius:16px;padding:10px 26px;box-shadow:0 10px 24px rgba(108,92,231,.4)}
+button.p:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(108,92,231,.5)}
+button.p::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:rgba(255,255,255,.35);transform:skewX(-20deg);animation:sh 3s infinite}
+@keyframes sh{to{left:130%}}
+.big-b{font-size:1.15rem;padding:12px 40px}
+.hm{background:#fff;color:var(--ac);font-weight:700;border-radius:14px;padding:6px 16px;margin-bottom:14px;box-shadow:0 4px 14px rgba(108,92,231,.15)}
+.hm:hover{transform:translateX(4px)}
+.bar{height:10px;background:rgba(108,92,231,.15);border-radius:10px;overflow:hidden;margin-bottom:16px}
+.bar i{display:block;height:100%;border-radius:10px;background:linear-gradient(90deg,var(--ac),var(--ac2),#ec4899);background-size:200% 100%;animation:mv 3s linear infinite;transition:width .6s}
+@keyframes mv{to{background-position:-200% 0}}
+.tag{display:inline-block;font-size:.78rem;font-weight:700;background:var(--k);color:#fff;border-radius:20px;padding:0 12px}
+.o{display:flex;align-items:center;gap:12px;width:100%;text-align:right;margin:10px 0;padding:12px 14px;border-radius:16px;background:#fff;color:var(--tx);font-weight:600;box-shadow:0 4px 14px rgba(30,35,71,.08);border:2px solid transparent;animation:up .45s both}
+.o:nth-of-type(2){animation-delay:.07s}.o:nth-of-type(3){animation-delay:.14s}.o:nth-of-type(4){animation-delay:.21s}
+.o::before{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,#ede9fe,#cffafe);color:var(--ac);font-weight:800}
+.o:nth-of-type(1)::before{content:"أ"}.o:nth-of-type(2)::before{content:"ب"}.o:nth-of-type(3)::before{content:"ج"}.o:nth-of-type(4)::before{content:"د"}
+.o:hover{transform:translateX(-5px);border-color:var(--ac);box-shadow:0 8px 20px rgba(108,92,231,.2)}
+.o.ok{background:#d1fae5;border-color:var(--ok);animation:pop .5s}
+.o.ok::before{content:"✓";background:var(--ok);color:#fff}
+.o.no{background:#fee2e2;border-color:var(--no);animation:shk .45s}
+.o.no::before{content:"✕";background:var(--no);color:#fff}
+@keyframes pop{40%{transform:scale(1.04)}}
+@keyframes shk{25%{transform:translateX(8px)}50%{transform:translateX(-8px)}75%{transform:translateX(5px)}}
+.ans{background:linear-gradient(135deg,#d1fae5,#ecfeff);border-right:5px solid var(--ok);border-radius:16px;padding:14px;margin-top:16px;animation:up .4s both}
+.ans b{user-select:all}
+.ans button:not(.p){background:#fff;color:var(--ok);border-radius:10px;padding:0 12px;font-weight:700}
+.cr{margin-top:8px;font-size:.82rem;color:var(--mu);user-select:all}
+.ring{position:relative;width:170px;height:170px;margin:4px auto 10px}
+.ring svg{transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:12;stroke-linecap:round}
+.ring .t{stroke:rgba(108,92,231,.15)}
+.ring .v{stroke:url(#g);stroke-dasharray:408;stroke-dashoffset:408;transition:stroke-dashoffset 1.6s cubic-bezier(.2,.8,.2,1)}
+.ring div{position:absolute;inset:0;display:grid;place-items:center;font-size:2.2rem;font-weight:800;color:var(--ac)}
+.cf{position:fixed;top:-20px;width:9px;height:14px;border-radius:2px;z-index:9;pointer-events:none;animation:fall 1.6s ease-in forwards}
+@keyframes fall{to{transform:translateY(105vh) rotate(720deg);opacity:.2}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="bg"><i></i><i></i><i></i></div>
+<div class="w" id="app"></div>
+<script>
+const CR="مقدم من صفحة ببساطه — إعداد مستر محمد سيد ومس نورهان إبراهيم — واتس 01505191893";
+// [القسم, السؤال, [الصحيحة, خطأ, خطأ, خطأ], ملاحظة]
+const Q=[
+["عربي","الغرض الشعري الذي يبكي فيه الشاعر الميت ويعدد مناقبه هو:",["الرثاء","الفخر","الهجاء","الغزل"],""],
+["عربي","الشاعرة المخضرمة (أدركت الجاهلية والإسلام) هي:",["الخنساء","ليلى الأخيلية","رابعة العدوية","فدوى طوقان"],"الخنساء رثت أخاها صخرًا وأسلمت."],
+["عربي","من شعراء المعلقات:",["لبيد بن ربيعة","الخنساء","عروة بن الورد","حسان بن ثابت"],"إن اجتمع لبيد وعبيد بن الأبرص فالأشهر في المعلقات السبع لبيد."],
+["عربي","عروة بن الورد من شعراء:",["الصعاليك","المعلقات","المخضرمين","الإحياء"],""],
+["عربي","اشتهر زهير بن أبي سلمى بـ:",["الحكمة","الفروسية","الغزل","الهجاء"],""],
+["عربي","شاعر العصر الحديث رائد مدرسة الإحياء والبعث هو:",["محمود سامي البارودي","امرؤ القيس","زهير بن أبي سلمى","لبيد"],""],
+["عربي","غرض معلقة امرئ القيس «قفا نبكِ» هو:",["الوقوف على الأطلال","الحكمة","الرثاء","الفخر"],""],
+["عربي","إعراب «نجومُها» في: أعجبتني السماءُ نجومُها:",["بدل اشتمال","بدل كل من كل","توكيد","نعت"],"السماء فاعل مرفوع، ونجومها بدل اشتمال."],
+["عربي","وزن الفعل «يقول» هو:",["يَفْعُل (عين مضمومة)","يُفْعِل (فاء مضمومة)","يَفْعَل","يُفَعِّل"],"أصله قال: ق و ل، ووزنه يفعُل."],
+["عربي","يجوز تذكير الفعل وتأنيثه مع الفاعل:",["المؤنث المجازي الظاهر","المؤنث الحقيقي المتصل","ضمير المؤنثة","جمع المذكر السالم"],"طلعتِ الشمسُ / طلعَ الشمسُ."],
+["عربي","النسب إلى «حُبلى»:",["حُبْلِيّ أو حُبْلَوِيّ","حُبلاوِيّ فقط","حُبلَويّ فقط","حبليّون"],"الألف الرابعة مع سكون الثاني: يجوز الحذف أو القلب واوًا."],
+["عربي","النسب إلى «نبيّ»:",["نَبَوِيّ","نبيّيّ","نبائي","نبويّ بكسر النون"],"المشدد بعد حرفين: تحذف الياء الثانية وتقلب الأولى واوًا ويفتح ما قبلها."],
+["عربي","علامة رفع المثنى:",["الألف","الواو","الياء","الضمة"],""],
+["عربي","جمع المؤنث السالم يُنصب بـ:",["الكسرة نيابة عن الفتحة","الفتحة","الياء","الألف"],""],
+["عربي","علامة رفع الأسماء الستة:",["الواو","الألف","الياء","الضمة"],""],
+["عربي","ياء المخاطبة تلحق بالفعل:",["المضارع والأمر","الماضي فقط","الماضي والمضارع","الجامد فقط"],"نحو: تكتبين، اكتبي."],
+["عربي","فعل الأمر:",["مبني","معرب","شبيه بالمعرب","مرفوع"],"يبنى على ما يجزم به مضارعه."],
+["عربي","«أسرّوا قولكم أو اجهروا به» الأمر فيها خرج لمعنى:",["التسوية","الدعاء","التهديد","النصح"],""],
+["عربي","الطباق هو:",["الجمع بين الشيء وضده","الجمع بين المتشابهين","تكرار اللفظ","حذف الجواب"],"يفيد إبراز المعنى وتوضيحه."],
+["عربي","«هل يستوي الذين يعلمون والذين لا يعلمون» فيها:",["طباق سلب","طباق إيجاب","جناس","مقابلة"],"اختلف الفعلان بالإثبات والنفي."],
+["عربي","تصغير «أحمد» تصغير ترخيم (حذف الزوائد ثم التصغير):",["حُمَيد","أُحَيمد","حَمدان","أُحمَد"],""],
+["عربي","الإعلال هو:",["تغيير حرف العلة بالقلب أو الحذف أو التسكين","إبدال الهمزة ألفًا","زيادة حرف","تشديد الحرف"],""],
+["عربي","معنى «حصيف»:",["عاقل محكم الرأي","غاضب","ضعيف","بخيل"],""],
+["عربي","معنى «دامس»:",["شديد الظلمة","شديد الحرارة","واسع","هادئ"],""],
+["عربي","معنى «رطب»:",["ندي ليّن غير يابس","شديد البرد","ثقيل","قديم"],""],
+["عربي","الكلمة التي همزتها همزة وصل:",["اجتهاد","إكرام","أحمد","أَكَلَ"],"مصدر الخماسي والسداسي همزته وصل."],
+["عربي","الصواب لغويًا:",["الأمهات يُرضعن أولادهن","الأمهات ترضعن أولادهن","الأمهات يرضعون أولادهن","الأمهات ترضعون أولادهن"],""],
+["عربي","اكتب العدد (12) مع «طالبًا»:",["اثنا عشر طالبًا","اثني عشرة طالبًا","اثنا عشرة طالبًا","إثنين عشر طالبًا"],""],
+["عربي","«إنّ العلمَ نافعٌ» جملة:",["خبر طلبي","خبر ابتدائي","خبر إنكاري","إنشاء طلبي"],"مؤكدة بمؤكد واحد."],
+["عربي","«اجتهدْ في عملك» أسلوب:",["إنشائي طلبي","خبري","إنشائي غير طلبي","شرطي"],"أمر."],
+["عربي","من أدوات النصب للفعل المضارع:",["لن","لم","لا الناهية","إنْ"],"أدوات النصب: أن، لن، كي، إذن."],
+["عربي","«قام القومُ إلا زيدًا» زيدًا:",["مستثنى منصوب وجوبًا","بدل مرفوع","فاعل","مفعول به"],"استثناء تام مثبت."],
+["عربي","«ما نجحَ إلا أحمدُ» أحمد:",["فاعل (استثناء مفرغ)","مستثنى منصوب","مفعول به","مبتدأ"],""],
+["عربي","علامة الترقيم التي تدل على حذف جزء من الكلام:",["نقاط الحذف (...)","الفاصلة","النقطتان","علامة التعجب"],""],
+["عربي","علامة الترقيم في آخر الجملة الخبرية التامة:",["النقطة","الفاصلة","الفاصلة المنقوطة","علامة الاستفهام"],""],
+["تربوي","النظرية البنائية ترى أن المتعلم:",["يبني معرفته بنفسه من خبراته","يتلقى المعلومة فقط","يتعلم بالعقاب","يحفظ دون فهم"],""],
+["تربوي","التقويم الذي يتم أثناء عملية التعلم لتحسينها:",["التقويم التكويني","التقويم النهائي","التقويم القبلي","الامتحان الختامي"],""],
+["تربوي","طالب يبالغ في الحركة داخل الفصل، أفضل تصرف للمعلم:",["توجيهه بهدوء وإشراكه في نشاط مناسب","طرده من الفصل","السخرية منه","تجاهله دائمًا"],""],
+["تربوي","التعزيز الإيجابي هو:",["مكافأة السلوك المرغوب لتكراره","عقاب السلوك الخاطئ","تجاهل الطالب","التهديد"],""],
+["معلومات عامة","تولى الملك فاروق الأول عرش مصر سنة:",["1936","1938","1922","1952"],"تولى بعد وفاة والده الملك فؤاد عام 1936."],
+["معلومات عامة","منطقة تونا الجبل الأثرية تقع في محافظة:",["المنيا","أسيوط","سوهاج","الجيزة"],""],
+["معلومات عامة","مدينة ديروط تتبع محافظة:",["أسيوط","المنيا","الفيوم","قنا"],""],
+["معلومات عامة","مركز العدوة يتبع محافظة:",["المنيا","بني سويف","أسيوط","الأقصر"],""],
+["معلومات عامة","التنمية المستدامة هي التنمية التي:",["تلبي احتياجات الحاضر دون الإضرار بحق الأجيال القادمة","تهتم بالحاضر فقط","توقف الاستثمار","تعتمد على الاستيراد"],"من محاورها رؤية مصر 2030."],
+["معلومات عامة","في رحلة 9 معلمين ومع كل معلم 8 طلاب، عدد الطلاب:",["72","17","64","81"],"9 × 8 = 72."],
+["معلومات عامة","الأمن السيبراني يختص بـ:",["حماية الأنظمة والشبكات والبيانات من الهجمات الإلكترونية","صيانة الأجهزة فقط","تصميم الألعاب","طباعة المستندات"],""],
+["حاسب","الملف ذو الامتداد exe هو ملف:",["تنفيذي","نصي","صورة","صوتي"],""],
+["حاسب","مختصر IP هو:",["Internet Protocol","Internal Program","Input Port","Image Processing"],"بروتوكول الإنترنت، وعنوان IP يميز كل جهاز في الشبكة."],
+["حاسب","GUI تعني:",["واجهة المستخدم الرسومية","نظام تشغيل","لغة برمجة","وحدة تخزين"],""],
+["حاسب","السماعات والطابعة من وحدات:",["الإخراج","الإدخال","التخزين","المعالجة"],""],
+["حاسب","ليس من كائنات Access:",["الشرائح (Slides)","الجداول","الاستعلامات","النماذج"],"PowerPoint لا Access هو الذي يستخدم الشرائح."],
+["حاسب","الهدف من النسخ الاحتياطي:",["حماية البيانات من الفقد أو التلف","تسريع الإنترنت","زيادة حجم الملفات","حذف الملفات"],""],
+["حاسب","برنامج العروض التقديمية من Microsoft Office:",["PowerPoint","Excel","Access","Notepad"],""],
+["حاسب","الدالة المستخدمة لجمع نطاق من الخلايا في Excel:",["SUM","COUNT","MAX","IF"],""],
+["إنجليزي","I ___ to the cinema yesterday.",["went","go","have gone","going"],"Simple past مع yesterday."],
+["إنجليزي","She ___ for two hours when I arrived.",["had been studying","studied","is studying","has studied"],"Past perfect continuous."],
+["إنجليزي","By the time we arrived, the film ___.",["had started","starts","is starting","starting"],"Past perfect."],
+["إنجليزي","Look! The children ___ in the garden.",["are playing","play","played","have played"],"Present continuous."],
+["إنجليزي","I think it ___ rain tomorrow.",["will","did","has","was"],"Future with will."],
+["إنجليزي","Synonym of «huge»:",["very big","tiny","narrow","quiet"],""],
+["إنجليزي","Synonym of «glad»:",["happy","angry","tired","late"],""],
+["إنجليزي","When we mix red and yellow we get:",["orange","pink","green","purple"],"red + white = pink."],
+["عربي","«وما نيلُ المطالبِ بالتمني ولكن تؤخذُ الدنيا غِلابا» غرض البيت:",["الحث على العمل والجد","الرثاء","الهجاء","وصف الطبيعة"],"لأحمد شوقي."],
+["عربي","«قم للمعلم وفِّه التبجيلا كاد المعلم أن يكون رسولا» غرض البيت:",["تكريم المعلم وتقدير مكانته","الغزل","الهجاء","الرثاء"],"لأحمد شوقي."],
+["عربي","«ومن لم يصانعْ في أمورٍ كثيرةٍ يُضرَّسْ بأنيابٍ ويُوطأْ بمنسِمِ» غرض البيت:",["الحكمة","الفخر","الرثاء","الغزل"],"لزهير بن أبي سلمى."],
+["عربي","«على قدرِ أهلِ العزمِ تأتي العزائمُ» غرض البيت:",["الحكمة والفخر بالعزيمة","الرثاء","الهجاء","الوصف"],"للمتنبي."],
+["عربي","«وللأوطانِ في دمِ كلِّ حرٍّ يدٌ سلفتْ ودَينٌ مستحَقُّ» غرضه:",["حب الوطن والانتماء إليه","الرثاء","المدح","الهجاء"],"لأحمد شوقي."],
+["عربي","«جاء الذي أكرمتُه» جملة «أكرمتُه» هي:",["صلة الموصول لا محل لها","خبر","حال","نعت"],"الغرض من صلة الموصول توضيح المراد بالاسم الموصول."],
+["عربي","إعراب «جميلًا» في: كان الجوُّ جميلًا:",["خبر كان منصوب","اسم كان","حال","مفعول به"],""],
+["عربي","إعراب «العلمَ» في: إنَّ العلمَ نورٌ:",["اسم إنّ منصوب","مبتدأ","فاعل","خبر"],""],
+["عربي","«العلمُ نورٌ» فيها:",["تشبيه بليغ","استعارة","كناية","طباق"],"حذف منها أداة التشبيه ووجه الشبه."],
+["عربي","«جاء المعلمون» علامة رفع «المعلمون»:",["الواو لأنه جمع مذكر سالم","الضمة","الألف","الياء"],""],
+["عربي","المفعول المطلق في: «فرحتُ فرحًا كبيرًا»:",["فرحًا","كبيرًا","فرحتُ","لا يوجد"],""],
+["عربي","«جاء الطالبُ مسرعًا» «مسرعًا» تعرب:",["حالًا","خبرًا","نعتًا","تمييزًا"],""],
+["عربي","مثنى «كتاب» في حالة الجر:",["كتابَيْن","كتابان","كتابون","كتابات"],""],
+["تربوي","الهدف السلوكي الجيد يكون:",["قابلًا للقياس والملاحظة","غامضًا","عامًا جدًا","خاصًا بالمعلم"],""],
+["تربوي","من استراتيجيات التعلم النشط:",["التعلم التعاوني","الإلقاء فقط","الحفظ الصم","الإملاء المتواصل"],""],
+["تربوي","طالب يتأخر دائمًا عن الحصة، أول خطوة للمعلم:",["معرفة أسباب التأخر بالحوار معه","فصله فورًا","إهانته أمام زملائه","تجاهله"],""],
+["معلومات عامة","حصل نجيب محفوظ على جائزة نوبل في الآداب عام:",["1988","1978","1998","1968"],""],
+["معلومات عامة","السد العالي يقع في محافظة:",["أسوان","الأقصر","قنا","المنيا"],""],
+["معلومات عامة","افتتحت قناة السويس للملاحة عام:",["1869","1956","1914","1973"],""],
+["معلومات عامة","حرب السادس من أكتوبر كانت عام:",["1973","1967","1956","1948"],""],
+["معلومات عامة","أطول أنهار العالم الذي يمر بمصر:",["النيل","الفرات","الأمازون","السين"],""],
+["حاسب","الاختصار RAM يعني:",["الذاكرة العشوائية (مؤقتة)","ذاكرة القراءة فقط","وحدة المعالجة","القرص الصلب"],""],
+["حاسب","اختصار النسخ في لوحة المفاتيح:",["Ctrl + C","Ctrl + V","Ctrl + X","Ctrl + Z"],"اللصق Ctrl + V."],
+["حاسب","برنامج Word مخصص لـ:",["معالجة النصوص","الجداول الحسابية","قواعد البيانات","تصفح الإنترنت"],""],
+["حاسب","وحدة المعالجة المركزية هي:",["CPU","RAM","GUI","USB"],""],
+["إنجليزي","The plural of «child» is:",["children","childs","childes","childrens"],""],
+["إنجليزي","She is ___ than her sister.",["taller","tallest","more tall","tall"],""],
+["إنجليزي","The book ___ by a famous writer.",["was written","wrote","writes","is writing"],"Passive voice."],
+["إنجليزي","I ___ here since 2010.",["have lived","lived","live","am living"],"Present perfect مع since."],
+["إنجليزي","Opposite of «hot»:",["cold","warm","big","fast"],""]
+];
+const cats=["الكل","عربي","تربوي","معلومات عامة","حاسب","إنجليزي"];
+const COL={"الكل":"#6c5ce7","عربي":"#e8590c","تربوي":"#0ca678","معلومات عامة":"#1c7ed6","حاسب":"#9c36b5","إنجليزي":"#e64980"};
+let cat="الكل",list=[],i=0,sc=0,done=false,wrong=[];
+const A=document.getElementById("app");
+const sh=a=>{a=a.slice();for(let k=a.length-1;k>0;k--){const j=Math.floor(Math.random()*(k+1));[a[k],a[j]]=[a[j],a[k]]}return a};
+function setCat(b,c){cat=c;document.querySelectorAll(".chips button").forEach(x=>x.classList.remove("on"));b.classList.add("on")}
+function home(){
+ A.innerHTML=`<div class="c hero"><div class="logo">🎓</div><h1>محاكي اختبار التنظيم والإدارة</h1><div class="mu">معلم مساعد • لغة عربية</div>
+ <div class="st"><div><b>${Q.length}</b>سؤال</div><div><b>${cats.length-1}</b>محاور</div><div><b>فوري</b>تصحيح</div></div>
+ <div class="mu">اختر المحور</div>
+ <div class="chips">${cats.map(c=>`<button style="--k:${COL[c]}" class="${c==cat?"on":""}" onclick="setCat(this,'${c}')">${c}</button>`).join("")}</div>
+ <button class="p big-b" onclick="start()">ابدأ الاختبار ◀</button></div><div class="mu" style="text-align:center">${CR}</div>`}
+function start(){list=sh(Q.filter(q=>cat=="الكل"||q[0]==cat));i=0;sc=0;wrong=[];show()}
+function show(){
+ const q=list[i];const opts=sh(q[2]);done=false;
+ A.innerHTML=`<button class="hm" onclick="home()">🏠 الصفحة الرئيسية</button><div class="bar"><i style="width:${i/list.length*100}%"></i></div><div class="c"><span class="tag" style="--k:${COL[q[0]]}">${q[0]}</span> <span class="mu">السؤال ${i+1} من ${list.length}</span>
+ <h2 dir="auto">${q[1]}</h2>
+ ${opts.map(o=>`<button class="o" dir="auto" data-v="${o}">${o}</button>`).join("")}<div id="fb"></div></div>`;
+ A.querySelectorAll(".o").forEach(b=>b.onclick=()=>pick(b,q));
+ scrollTo({top:0,behavior:"smooth"});
+}
+function confetti(){
+ const cl=["#6c5ce7","#00b8d9","#ec4899","#f59e0b","#10b981"];
+ for(let k=0;k<30;k++){const s=document.createElement("span");s.className="cf";
+  s.style.cssText=`left:${Math.random()*100}vw;background:${cl[k%5]};animation-delay:${Math.random()*.4}s;animation-duration:${1.2+Math.random()}s`;
+  document.body.appendChild(s);setTimeout(()=>s.remove(),2600)}
+}
+function pick(b,q){
+ if(done)return;done=true;const ok=b.dataset.v==q[2][0];
+ if(ok){sc++;confetti()}else wrong.push(q);
+ A.querySelectorAll(".o").forEach(x=>{if(x.dataset.v==q[2][0])x.classList.add("ok");else if(x==b)x.classList.add("no")});
+ document.getElementById("fb").innerHTML=`<div class="ans"><div style="font-weight:800">${ok?"أحسنت! إجابة صحيحة 🎉":"إجابة خاطئة، ركّز في الصحيحة 💡"}</div><div>الإجابة الصحيحة: <b id="ca" dir="auto">${q[2][0]}</b> <button onclick="cp()">نسخ</button></div>${q[3]?`<div class="mu">${q[3]}</div>`:""}<div class="cr">${CR}</div></div>
+ <button class="p" style="margin-top:14px" onclick="next()">${i+1<list.length?"السؤال التالي ◀":"عرض النتيجة 🏁"}</button>`;
+ document.getElementById("fb").scrollIntoView({behavior:"smooth",block:"nearest"});
+}
+function cp(){const t=document.getElementById("ca").textContent+"\n"+CR;try{navigator.clipboard.writeText(t)}catch(e){const r=document.createRange();r.selectNodeContents(document.getElementById("ca"));const s=getSelection();s.removeAllRanges();s.addRange(r)}}
+function next(){i++;i<list.length?show():end()}
+function end(){
+ const p=Math.round(sc/list.length*100);
+ const m=p>=85?"ممتاز! جاهز للامتحان 🏆":p>=65?"جيد جدًا، كمّل 👏":p>=50?"كويس، محتاج مراجعة بسيطة 💪":"راجع وحاول تاني، هتوصل 📚";
+ A.innerHTML=`<div class="c hero"><div class="ring"><svg width="170" height="170" viewBox="0 0 150 150"><defs><linearGradient id="g"><stop offset="0" stop-color="#6c5ce7"/><stop offset="1" stop-color="#ec4899"/></linearGradient></defs><circle class="t" cx="75" cy="75" r="65"/><circle class="v" id="rv" cx="75" cy="75" r="65"/></svg><div id="pc">0%</div></div>
+ <h1>${sc} من ${list.length}</h1><div style="font-weight:700;margin:6px 0 16px">${m}</div>
+ <button class="p" onclick="home()">🏠 العودة للصفحة الرئيسية</button> <button class="p" style="background:#fff;color:var(--ac)" onclick="start()">↻ إعادة الاختبار</button></div>
+ ${wrong.length?`<div class="c"><h2>مراجعة الأسئلة الخاطئة</h2>${wrong.map(q=>`<p dir="auto">${q[1]}<br><b style="color:var(--ok)">الإجابة الصحيحة: ${q[2][0]}</b></p>`).join("")}<div class="cr">${CR}</div></div>`:""}`;
+ setTimeout(()=>{document.getElementById("rv").style.strokeDashoffset=408*(1-p/100)},60);
+ let n=0;const el=document.getElementById("pc"),st=performance.now();
+ (function f(t){const k=Math.min((t-st)/1600,1);el.textContent=Math.round(p*k)+"%";if(k<1)requestAnimationFrame(f)})(st);
+ if(p>=65)confetti();
+}
+home();
+</script>
+</body>
+</html>
